@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shi Love — Couture · Culture · Confidence</title>
+  <meta name="description" content="Shi Love (@_shilove) — visionary fashion designer elevating Atlanta's style scene with bold, culturally-rooted couture. Explore Shi Love Clothing.">
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+  <meta property="og:title" content="Shi Love — Couture · Culture · Confidence">
+  <meta property="og:description" content="Shi Love (@_shilove) — visionary fashion designer elevating Atlanta's style scene with bold, culturally-rooted couture. Explore Shi Love Clothing.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/og-image.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1280">
+  <meta property="og:image:height" content="720">
+  <meta property="og:image:alt" content="Shi Love — Couture · Culture · Confidence">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Shi Love — Couture · Culture · Confidence">
+  <meta name="twitter:description" content="Visionary fashion designer elevating Atlanta's style scene with bold, culturally-rooted couture. Explore Shi Love Clothing.">
+  <meta name="twitter:image" content="images/og-image.png">
+
+  <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+  <link href="https://api.fontshare.com/v2/css?f[]=clash-display@200,300,400,500,600,700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Loader -->
+  <div class="loader" id="loader">
+    <div class="loader__icon">🪡</div>
+    <div class="loader__text">SHI LOVE</div>
+    <div class="loader__bar"><div class="loader__fill"></div></div>
+  </div>
+
+  <!-- Audio -->
+  <audio id="theme-song" preload="auto" loop>
+    <source src="audio/Couture_Chronicles_Favorite_1.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Mute Button -->
+  <button id="mute-toggle" class="mute-btn" aria-label="Mute/Unmute music" title="Toggle Music">
+    <span class="mute-icon">🪡</span>
+  </button>
+
+  <!-- Music Prompt -->
+  <div id="music-prompt" class="music-prompt hidden">
+    <div class="music-prompt-content">
+      <div class="music-prompt-icon">🪡</div>
+      <p>tap to enable the soundtrack</p>
+      <button id="enable-music-btn" class="enable-music-btn">PLAY MUSIC</button>
+    </div>
+  </div>
+
+  <!-- Custom Cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#hero" class="nav__logo">
+        <span class="nav__icon">🪡</span>
+        <span class="nav__name">SL</span>
+      </a>
+      <div class="nav__links" id="navLinks">
+        <a href="#explore" class="nav__link">Explore</a>
+        <a href="#about" class="nav__link">About</a>
+        <a href="#connect" class="nav__link">Connect</a>
+      </div>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu__inner">
+      <a href="#explore" class="mobile-menu__link" data-index="01">Explore</a>
+      <a href="#about" class="mobile-menu__link" data-index="02">About</a>
+      <a href="#connect" class="mobile-menu__link" data-index="03">Connect</a>
+      <div class="mobile-menu__socials">
+        <a href="https://instagram.com/_shilove" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://instagram.com/shiloveclothing" target="_blank" rel="noopener" aria-label="Instagram Brand"><i class="fab fa-instagram"></i></a>
+        <a href="https://x.com/shiloveclothing" target="_blank" rel="noopener" aria-label="X/Twitter"><i class="fab fa-x-twitter"></i></a>
+        <a href="https://shilovesclothing.com/" target="_blank" rel="noopener" aria-label="Website"><i class="fas fa-globe"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero" id="hero">
+      <div class="hero__bg">
+        <div class="hero__orb hero__orb--1"></div>
+        <div class="hero__orb hero__orb--2"></div>
+        <div class="hero__orb hero__orb--3"></div>
+        <div class="hero__grain"></div>
+      </div>
+      <div class="hero__content">
+        <div class="hero__split">
+          <div class="hero__text">
+            <div class="hero__icon reveal" data-delay="0.3">🪡</div>
+            <h1 class="hero__title">
+              <span class="hero__line reveal" data-delay="0.5">SHI</span>
+              <span class="hero__line hero__line--accent reveal" data-delay="0.7">LOVE</span>
+            </h1>
+            <p class="hero__tagline reveal" data-delay="0.9">Couture&ensp;&middot;&ensp;Culture&ensp;&middot;&ensp;Confidence</p>
+            <div class="hero__cta reveal" data-delay="1.1">
+              <a href="#explore" class="btn btn--primary">Shop the Collection</a>
+            </div>
+          </div>
+          <div class="hero__image reveal" data-delay="0.6">
+            <div class="hero__image-glow"></div>
+            <picture>
+              <source media="(max-width: 767px)" srcset="images/hero-cutout-mobile.png">
+              <img src="images/hero-cutout.png" alt="Shi Love" class="hero__portrait" loading="eager">
+            </picture>
+          </div>
+        </div>
+        <div class="hero__stats reveal" data-delay="1.3">
+          <div class="hero__stat">
+            <span class="hero__stat-number" data-count="23000">0</span>
+            <span class="hero__stat-label">Community</span>
+          </div>
+          <div class="hero__stat-divider"></div>
+          <div class="hero__stat">
+            <span class="hero__stat-number" data-count="4">0</span><span class="hero__stat-suffix">+</span>
+            <span class="hero__stat-label">Platforms</span>
+          </div>
+          <div class="hero__stat-divider"></div>
+          <div class="hero__stat">
+            <span class="hero__stat-icon">🪡</span>
+            <span class="hero__stat-label">Designer</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero__scroll reveal" data-delay="1.5">
+        <span>Scroll</span>
+        <div class="hero__scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- EXPLORE -->
+    <section class="explore" id="explore">
+      <div class="section__container">
+        <div class="section__header">
+          <span class="section__number reveal">01</span>
+          <h2 class="section__title reveal">Explore</h2>
+          <p class="section__subtitle reveal">Curated pieces that make a statement.</p>
+        </div>
+        <div class="explore__grid">
+
+          <a href="https://shilovesclothing.com/collections" target="_blank" rel="noopener" class="link-card link-card--featured reveal">
+            <div class="link-card__glow"></div>
+            <div class="link-card__icon"><i class="fas fa-gem"></i></div>
+            <div class="link-card__content">
+              <h3 class="link-card__title">Shop Collections</h3>
+              <p class="link-card__desc">Explore Shi Love's signature pieces and latest drops &mdash; shilovesclothing.com</p>
+            </div>
+            <div class="link-card__arrow"><i class="fas fa-arrow-right"></i></div>
+          </a>
+
+          <a href="https://shilovesclothing.com/collections/all" target="_blank" rel="noopener" class="link-card link-card--featured reveal">
+            <div class="link-card__glow"></div>
+            <div class="link-card__icon"><i class="fas fa-shirt"></i></div>
+            <div class="link-card__content">
+              <h3 class="link-card__title">All Products</h3>
+              <p class="link-card__desc">Browse the full Shi Love Clothing catalog &mdash; shilovesclothing.com</p>
+            </div>
+            <div class="link-card__arrow"><i class="fas fa-arrow-right"></i></div>
+          </a>
+
+          <a href="https://shilovesclothing.com/pages/contact" target="_blank" rel="noopener" class="link-card link-card--featured reveal">
+            <div class="link-card__glow"></div>
+            <div class="link-card__icon"><i class="fas fa-scissors"></i></div>
+            <div class="link-card__content">
+              <h3 class="link-card__title">Custom Orders</h3>
+              <p class="link-card__desc">Commission a one-of-a-kind piece &mdash; shilovesclothing.com</p>
+            </div>
+            <div class="link-card__arrow"><i class="fas fa-arrow-right"></i></div>
+          </a>
+
+          <a href="https://shilovesclothing.com/pages/about" target="_blank" rel="noopener" class="link-card reveal">
+            <div class="link-card__icon"><i class="fas fa-book-open"></i></div>
+            <div class="link-card__content">
+              <h3 class="link-card__title">About Shi Love</h3>
+              <p class="link-card__desc">The designer's story and brand philosophy</p>
+            </div>
+            <div class="link-card__arrow"><i class="fas fa-arrow-right"></i></div>
+          </a>
+
+          <a href="https://instagram.com/shiloveclothing" target="_blank" rel="noopener" class="link-card reveal">
+            <div class="link-card__icon"><i class="fab fa-instagram"></i></div>
+            <div class="link-card__content">
+              <h3 class="link-card__title">@shiloveclothing</h3>
+              <p class="link-card__desc">Behind the scenes of the design process</p>
+            </div>
+            <div class="link-card__arrow"><i class="fas fa-arrow-right"></i></div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+      <div class="section__container">
+        <div class="about__layout">
+          <div class="about__visual reveal">
+            <div class="about__image-frame">
+              <img src="images/shilove-1.jpg" alt="Shi Love fashion portrait" class="about__photo" loading="lazy">
+              <div class="about__image-border"></div>
+            </div>
+          </div>
+          <div class="about__text">
+            <span class="section__number reveal">02</span>
+            <h2 class="section__title reveal">About</h2>
+            <div class="about__bio">
+              <p class="reveal">Rashida, known as Shi Love, is a visionary fashion designer elevating Atlanta's style scene with her bold, culturally-rooted designs. As the creative force behind <em>Shi Love Clothing</em>, she crafts pieces that blend elegance, edge, and authenticity &mdash; fashion that makes a statement.</p>
+              <p class="reveal">With roots in both the UK and Ghana &#127468;&#127463;&#127468;&#127469;, Shi Love's designs reflect a global perspective while staying grounded in Black excellence and cultural pride. Her clothing isn't mass-produced &mdash; it's curated, intentional, and designed to make you feel powerful.</p>
+              <p class="reveal">Based in Atlanta, Shi Love has built a brand that speaks to those who refuse to blend in. From custom pieces to signature collections, her work has made her one of Atlanta's most sought-after designers.</p>
+              <p class="reveal">Couture. Culture. Confidence.</p>
+            </div>
+            <div class="about__cta reveal">
+              <a href="https://shilovesclothing.com/collections" target="_blank" rel="noopener" class="btn btn--primary">Shop the Collection</a>
+              <a href="https://shilovesclothing.com/pages/contact" target="_blank" rel="noopener" class="btn btn--ghost">Custom Orders</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FULL-BLEED QUOTE BREAK -->
+    <section class="quote-break">
+      <div class="quote-break__overlay"></div>
+      <div class="quote-break__content reveal">
+        <span>🪡</span>
+        <p>fashion is more than clothing &mdash; it's a statement of who you are and who you're becoming.</p>
+      </div>
+    </section>
+
+    <!-- CONNECT -->
+    <section class="connect" id="connect">
+      <div class="section__container">
+        <div class="section__header section__header--center">
+          <span class="section__number reveal">03</span>
+          <h2 class="section__title section__title--large reveal">Let's<br>Connect</h2>
+          <p class="section__subtitle reveal">Find me everywhere that matters.</p>
+        </div>
+        <div class="connect__grid">
+          <a href="https://instagram.com/_shilove" target="_blank" rel="noopener" class="connect-card reveal">
+            <i class="fab fa-instagram connect-card__icon"></i>
+            <span class="connect-card__name">Instagram</span>
+            <span class="connect-card__handle">@_shilove</span>
+          </a>
+          <a href="https://instagram.com/shiloveclothing" target="_blank" rel="noopener" class="connect-card reveal">
+            <i class="fab fa-instagram connect-card__icon"></i>
+            <span class="connect-card__name">Brand</span>
+            <span class="connect-card__handle">@shiloveclothing</span>
+          </a>
+          <a href="https://x.com/shiloveclothing" target="_blank" rel="noopener" class="connect-card reveal">
+            <i class="fab fa-x-twitter connect-card__icon"></i>
+            <span class="connect-card__name">X / Twitter</span>
+            <span class="connect-card__handle">@shiloveclothing</span>
+          </a>
+          <a href="https://shilovesclothing.com/" target="_blank" rel="noopener" class="connect-card reveal">
+            <i class="fas fa-globe connect-card__icon"></i>
+            <span class="connect-card__name">Website</span>
+            <span class="connect-card__handle">shilovesclothing.com</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>SHI LOVE</span><span>🪡</span>
+        <span>COUTURE</span><span>🪡</span>
+        <span>CULTURE</span><span>🪡</span>
+        <span>CONFIDENCE</span><span>🪡</span>
+        <span>SHI LOVE</span><span>🪡</span>
+        <span>COUTURE</span><span>🪡</span>
+        <span>CULTURE</span><span>🪡</span>
+        <span>CONFIDENCE</span><span>🪡</span>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <span class="footer__icon">🪡</span>
+          <span class="footer__name">SHI LOVE</span>
+        </div>
+        <div class="footer__socials">
+          <a href="https://instagram.com/_shilove" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://instagram.com/shiloveclothing" target="_blank" rel="noopener" aria-label="Instagram Brand"><i class="fab fa-instagram"></i></a>
+          <a href="https://x.com/shiloveclothing" target="_blank" rel="noopener" aria-label="X/Twitter"><i class="fab fa-x-twitter"></i></a>
+          <a href="https://shilovesclothing.com/" target="_blank" rel="noopener" aria-label="Website"><i class="fas fa-globe"></i></a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copy">&copy; 2026 Shi Love &middot; Shi Love Clothing. All rights reserved.</p>
+        <p class="footer__credit">Crafted with 🪡 by <a href="https://bigpoppacode.io" target="_blank" rel="noopener">@bigpoppacode</a></p>
+      </div>
+    </div>
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
